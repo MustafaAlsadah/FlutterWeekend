@@ -83,8 +83,14 @@ class MyApp extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
-                          Image.asset("assets/fanVillages.png"),
-                          Image.asset("assets/countDown.png"),
+                          Container(child: Image.asset("assets/fanVillages.png")
+                          ,margin: EdgeInsets.only(left: 16),),
+                          Container(child: Image.asset("assets/countDown.png"),
+                          margin: EdgeInsets.only(left: 16),),
+                          Container(child: Image.asset("assets/fanVillages.png")
+                            ,margin: EdgeInsets.only(left: 16),),
+                          Container(child: Image.asset("assets/countDown.png"),
+                            margin: EdgeInsets.only(left: 16),),
 
                         ],
                       ),
