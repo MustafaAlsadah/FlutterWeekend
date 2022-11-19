@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: PreferredSize(
-            preferredSize:  Size.fromHeight(100.0),
+            preferredSize:  Size.fromHeight(85.0),
             child: AppBar(
               toolbarHeight: 100.0,
               centerTitle: true,
@@ -21,38 +21,66 @@ class MyApp extends StatelessWidget {
               leading: SizedBox(
                 child: Image.asset("assets/world-cup-2022-logo-1.png"),
               ),
-              title: Padding(
-                padding: const EdgeInsets.symmetric(),
-                child: Row(
-                  children: [Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
+              title: Center(
+                child: Container(margin: EdgeInsets.only(left: 90),
+                  child: Row(
+                    children: [Column(
+                      children: [
 
-                      Column(
-                        children: [
-                          Row(
-                            children: [Column(
-                              children: [Image.asset("assets/argentina1.png"), Text("ARG")],
+                        Column(
+                          children: [
+                            Row(
+                              children: [Column(
+                                children: [Image.asset("assets/argentina1.png"), Text("ARG")],
+                              ),
+                                Text("X"),
+                                Column(
+                                  children: [Image.asset("assets/saudi-arabia1.png"), Text("KSA")],
+                                )],
                             ),
-                              Text("X"),
-                              Column(
-                                children: [Image.asset("assets/saudi-arabia1.png"), Text("KSA")],
-                              )],
-                          ),
-                          Text("2 days",
-                          style: TextStyle(color: Color(0xFFB8FFF7)),
-                          )
-                        ],
-                      )
-                    ],
-                  ),Text("Doha 29 C")],
+                            Text("2 days",
+                            style: TextStyle(color: Color(0xFFB8FFF7)),
+                            )
+                          ],
+                        )
+                      ],
+                    ),Container(child: Text("Doha 29 C"),
+                    margin: EdgeInsets.only(left: 22.0),)],
+                  ),
                 ),
 
 
               )
             ),
           ),
-          
+            bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: const Color(0xff03CFB8),
+              selectedItemColor: const Color(0xff830542),
+              // iconSize: 32,
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.calendar_today),
+                  label: 'Schedule',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.explore),
+                  label: 'Discover',
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(AssetImage('assets/mainNav.png'), size: 48),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.tour),
+                  label: 'Tour',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.account_circle_rounded),
+                  label: 'Profile',
+                ),
+              ],
+            ),
           body: SingleChildScrollView(
             child: Column(
               children: [ 

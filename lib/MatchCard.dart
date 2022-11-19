@@ -92,7 +92,6 @@ class MatchCard extends StatelessWidget {
           Center(
             child: Container(
               margin: const EdgeInsets.only(left: 20.0, right: 20.0),
-              child: Center(
                 child: Row(
                   children: [
                     Text("$kickoffTime",
@@ -103,7 +102,6 @@ class MatchCard extends StatelessWidget {
                     )
                   ],
                 ),
-              ),
               decoration: BoxDecoration(
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0)),
                 color: Color(0xFF630030),
